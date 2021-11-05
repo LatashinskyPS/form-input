@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org" lang="EN">
+<head>
+    <title>Wicket Simple</title>
+</head>
+<body>
+<form wicket:id="form">
+    <label for="stringProperty">Enter something:</label><br/>
+    <input wicket:id="line" id="stringProperty" type="text" size="40"/><br/>
+    <label for="numberRadioChoice">RadioChoice:</label><br/>
+    <span wicket:id="numberRadioChoice" id="numberRadioChoice"></span>
+    <label for="numberDropDown">DropDown:</label><br/>
+    <select wicket:id="numberDropDown" id="numberDropDown"></select><br/>
+    <label for="booleanProperty">Boolean check box:</label><br/>
+    <input wicket:id="booleanCheckBox" id="booleanProperty" type="checkbox"/><br/>
+    <input type="submit" value="Submit"/><br/>
+</form>
+<li wicket:id="lines"></li>
+</body>
+</html>
