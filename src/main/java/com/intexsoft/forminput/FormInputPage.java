@@ -28,6 +28,6 @@ public class FormInputPage extends WebPage {
         form.add(new CheckBox("booleanCheckBox"));
 
         add(form);
-        add(new Label("lines", new Model<>(component)));
+        add(new Label("model", new Model<>(component)));
     }
 }

@@ -12,7 +12,6 @@ public class FormInputModel implements Serializable {
     private Integer numberRadioChoice = 0;
     private Integer numberDropDown = 0;
     private Boolean booleanCheckBox = false;
-    private static List<String> lines = new ArrayList<>();
 
     @Override
     public String toString() {
@@ -67,14 +66,6 @@ public class FormInputModel implements Serializable {
 
     public void setBooleanCheckBox(Boolean booleanCheckBox) {
         this.booleanCheckBox = booleanCheckBox;
-    }
-
-    public static List<String> getLines() {
-        return lines;
-    }
-
-    public static void setLines(List<String> lines) {
-        FormInputModel.lines = lines;
     }
 
 }
