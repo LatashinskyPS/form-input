@@ -9,25 +9,24 @@ import org.apache.wicket.model.Model;
 
 public class FormInputPage extends WebPage {
 
-    private static FormInputModel component = new FormInputModel();
 
     public FormInputPage() {
-        CompoundPropertyModel<FormInputModel> compoundPropertyModel = new CompoundPropertyModel<>(component);
-        Form<FormInputModel> form = new Form<>("form", compoundPropertyModel);
+        CompoundPropertyModel<FormInputModelDAO> compoundPropertyModel = new CompoundPropertyModel<>(new FormInputModelDAO());
+        Form<FormInputModelDAO> form = new Form<>("form", compoundPropertyModel);
 
-        form.add(new TextField<>("line"));
+        form.add(new TextField<>("formInputModel.line"));
 
-        RadioChoice<Integer> radioChoice = new RadioChoice<>("numberRadioChoice");
-        radioChoice.setChoices(compoundPropertyModel.bind("numbers"));
+        RadioChoice<Integer> radioChoice = new RadioChoice<>("formInputModel.numberRadioChoice");
+        radioChoice.setChoices(compoundPropertyModel.bind("formInputModel.numbers"));
         form.add(radioChoice);
 
-        DropDownChoice<Integer> dropDownChoice = new DropDownChoice<>("numberDropDown");
-        dropDownChoice.setChoices(compoundPropertyModel.bind("numbers"));
+        DropDownChoice<Integer> dropDownChoice = new DropDownChoice<>("formInputModel.numberDropDown");
+        dropDownChoice.setChoices(compoundPropertyModel.bind("formInputModel.numbers"));
         form.add(dropDownChoice);
 
-        form.add(new CheckBox("booleanCheckBox"));
+        form.add(new CheckBox("formInputModel.booleanCheckBox"));
 
         add(form);
-        add(new Label("model", new Model<>(component)));
+        add(new Label("model", compoundPropertyModel.bind("formInputModel")));
     }
 }

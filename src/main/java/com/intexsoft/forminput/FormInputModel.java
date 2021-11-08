@@ -54,6 +54,7 @@ public class FormInputModel implements Serializable {
 
     public void setLine(String line) {
         this.line = line;
+        System.out.println(Thread.currentThread());
     }
 
     public List<Integer> getNumbers() {

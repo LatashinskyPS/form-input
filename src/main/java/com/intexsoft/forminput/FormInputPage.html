@@ -6,13 +6,13 @@
 <body>
 <form wicket:id="form">
     <label for="stringProperty">Enter something:</label><br/>
-    <input wicket:id="line" id="stringProperty" type="text" size="40"/><br/>
+    <input wicket:id="formInputModel.line" id="stringProperty" type="text" size="40"/><br/>
     <label for="numberRadioChoice">RadioChoice:</label><br/>
-    <span wicket:id="numberRadioChoice" id="numberRadioChoice"></span>
+    <span wicket:id="formInputModel.numberRadioChoice" id="numberRadioChoice"></span>
     <label for="numberDropDown">DropDown:</label><br/>
-    <select wicket:id="numberDropDown" id="numberDropDown"></select><br/>
+    <select wicket:id="formInputModel.numberDropDown" id="numberDropDown"></select><br/>
     <label for="booleanProperty">Boolean check box:</label><br/>
-    <input wicket:id="booleanCheckBox" id="booleanProperty" type="checkbox"/><br/>
+    <input wicket:id="formInputModel.booleanCheckBox" id="booleanProperty" type="checkbox"/><br/>
     <input type="submit" value="Submit"/><br/>
 </form>
 <li wicket:id="model"></li>
