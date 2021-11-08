@@ -4,15 +4,14 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.*;
 import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.Model;
 
 
 public class FormInputPage extends WebPage {
 
 
     public FormInputPage() {
-        CompoundPropertyModel<FormInputModelDAO> compoundPropertyModel = new CompoundPropertyModel<>(new FormInputModelDAO());
-        Form<FormInputModelDAO> form = new Form<>("form", compoundPropertyModel);
+        CompoundPropertyModel<FormInputModelStore> compoundPropertyModel = new CompoundPropertyModel<>(new FormInputModelStore());
+        Form<FormInputModelStore> form = new Form<>("form", compoundPropertyModel);
 
         form.add(new TextField<>("formInputModel.line"));
 
