@@ -1,6 +1,8 @@
 package com.intexsoft.forminput;
 
-public class FormInputModelStore {
+import java.io.Serializable;
+
+public class FormInputModelStore implements Serializable {
     public static FormInputModel formInputModel = new FormInputModel();
 
     public static FormInputModel getFormInputModel() {
